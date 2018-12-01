@@ -1,2 +1,0 @@
-# ChoresProject
-Final Project
