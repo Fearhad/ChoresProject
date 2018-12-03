@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const parentSchema = new Schema({
+const familySchema = new Schema({
    
     familyName: { type: String, required: true, trim: true},
     parents: [{
