@@ -1,39 +1,43 @@
 
-const db = require('../models/family');
-//const Family = require('../models/family');
+const db = require('../models/chores');
+
 
 module.exports = {
 
     findAll: function (req, res) {
-        db.Family
+        db.Chores
             .find()
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
 
     findById: function (req, res) {
-        db.Family
+        db.Chores
             .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
 
     create: function (req, res) {
-        db.Family
+        db.Chores
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
 
     update: function (req, res) {
-        db.Family
-            .findOneAndUpdate({ _id: req.params.id }, req.body)
+        db.Chores
+            .findOneAndUpdate({ _id: req.params.id },
+                {
+                    "name": req.body.name
+                },
+            )
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
 
     remove: function (req, res) {
-        db.Family
+        db.Chores
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
