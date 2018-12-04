@@ -20,6 +20,9 @@
   "homepage": "https://github.com/Fearhad/ChoresProject#readme",
   "proxy": "http://localhost:3001",
   "dependencies": {
-    "express": "^4.16.4"
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14",
+    "socket.io": "^2.2.0"
   }
 }
