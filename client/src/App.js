@@ -5,7 +5,7 @@ import classes from './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={classes.App}>
       <Toolbar />
       </div>
     );
