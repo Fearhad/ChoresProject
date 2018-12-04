@@ -1,15 +1,25 @@
 const express = require("express");
 const path = require("path");
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 //const routes = require("./routes");
 const axios = require("axios");
-const db = require("./models");
 //const socket = require("socket.io");
 const app = express();
+var bodyParser = require('body-parser')
+var cors = require('cors')
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 //const http = require('http').Server(app);
 const PORT = process.env.PORT || 8080;
 
-//const MONGODB_URI = process.env.MONGODB_URI || "http://localhost:8080"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
+var db = require("./models");
+
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
