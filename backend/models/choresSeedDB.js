@@ -11,7 +11,7 @@ mongoose.connect(
 const choresSeed = [
   {
     name: "Make a Bed",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "Gaby",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -19,7 +19,7 @@ const choresSeed = [
   },
   {
     name: "Clean Bedroom",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "Karen",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -27,7 +27,7 @@ const choresSeed = [
   },
   {
     name: "Unload dishwasher",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "Gaby",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value

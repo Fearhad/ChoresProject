@@ -11,13 +11,13 @@ mongoose.connect(
 const childrenSeed = [
   {
     name: "Gaby",
-    points: 50
+    points: 50,
     assignedchores: [{["Make Bed", "Pick up Toys"], ref: 'Children' }],
     badgesEarned: [String]  
   },
   {
     name: "Karen",
-    points: 30
+    points: 30,
     assignedchores: [{["Load dishwasher", "Unload dishwasher"], ref: 'Children' }],
     badgesEarned: [String]  
   },

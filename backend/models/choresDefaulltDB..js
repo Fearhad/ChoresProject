@@ -11,7 +11,7 @@ mongoose.connect(
 const choresDefault = [
   {
     name: "Make a Bed",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -19,7 +19,7 @@ const choresDefault = [
   },
   {
     name: "Clean Bedroom",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -27,7 +27,7 @@ const choresDefault = [
   },
   {
     name: "Pick up Toys",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -35,7 +35,7 @@ const choresDefault = [
   },
   {
     name: "Load dishwasher",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -43,7 +43,7 @@ const choresDefault = [
   },
   {
     name: "Unload dishwasher",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -51,7 +51,7 @@ const choresDefault = [
   },
   {
     name: "Wash Dishes",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -59,7 +59,7 @@ const choresDefault = [
   },
   {
     name: "Clean Kitchen",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -67,7 +67,7 @@ const choresDefault = [
   },
   {
     name: "Countertops",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -75,7 +75,7 @@ const choresDefault = [
   },
   {
     name: "Sweep Floor",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
@@ -83,7 +83,7 @@ const choresDefault = [
   },
   {
     name: "Vacuum Floor",
-    value: 20  // range: 1 < x <=  50
+    value: 20,  // range: 1 < x <=  50
     assignedTo: "",
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
