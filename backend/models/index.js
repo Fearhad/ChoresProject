@@ -1,5 +1,9 @@
 module.exports = {
   chores: require("./chores"),
+  choresSeedDB: require("./choresSeedDB"),
+  choresDefaultDb: require("./choresDefaultDB"),
   family: require("./family"),
-  children: require("./children")
+  familySeedDB: require("./familySeedDB"),  
+  children: require("./children"),
+  childrenSeedDB: require("./childrenSeedDB"),
 }

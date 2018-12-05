@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require(".");
 
 // This file empties the Books collection and inserts the books below
 
@@ -16,8 +16,24 @@ const choresSeed = [
     canBid: true,
     bidValue: 100, //  range: 1 < x <=  value
     frequency: "daily" // dayly, Weekly, Monthly
-
   },
+  {
+    name: "Clean Bedroom",
+    value: 20  // range: 1 < x <=  50
+    assignedTo: "Karen",
+    canBid: true,
+    bidValue: 100, //  range: 1 < x <=  value
+    frequency: "daily" // dayly, Weekly, Monthly
+  },
+  {
+    name: "Unload dishwasher",
+    value: 20  // range: 1 < x <=  50
+    assignedTo: "Gaby",
+    canBid: true,
+    bidValue: 100, //  range: 1 < x <=  value
+    frequency: "daily" // dayly, Weekly, Monthly
+  },
+  
   
 ];
 

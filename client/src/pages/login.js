@@ -3,7 +3,7 @@
  // Call Remaining imports
 
 
-class Parents extends Component {
+class Login extends Component {
   render() {
 
     <div> Something here </div>
@@ -19,4 +19,4 @@ class Parents extends Component {
   }
 }
 
-export default Parents;
+export default Login;
