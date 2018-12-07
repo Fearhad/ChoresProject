@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-//const routes = require("./routes");
+const routes = require("./routes");
 const axios = require("axios");
 //const socket = require("socket.io");
 const app = express();
@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 // Define API routes here
-//app.use(routes);
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
