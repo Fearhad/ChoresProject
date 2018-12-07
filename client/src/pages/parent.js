@@ -1,22 +1,13 @@
  import React, { Component } from 'react';
 
- // Call Remaining imports
-
-
-class Parents extends Component {
+class Parent extends Component {
   render() {
-
-    <div> Something here </div>
-
 
     return (
 
-      <div> Something here </div>
-      
-
-
+      <h1> You are a parent </h1>
     );
   }
 }
 
-export default Parents;
+export default Parent;
