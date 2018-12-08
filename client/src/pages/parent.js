@@ -1,6 +1,6 @@
- import React, { Component } from 'react';
- import axios from 'axios';
-
+import React, { Component } from 'react';
+import axios from 'axios';
+import Child from "../Components/Child";
 
 class Parent extends Component {
 
@@ -11,8 +11,7 @@ class Parent extends Component {
   componentDidMount() {
   
     axios.get('/api/children')
-      .then(response => {
-        console.log(response.data)
+      .then(response => {        
         this.setState({children: response.data})
       
     })
@@ -22,13 +21,15 @@ class Parent extends Component {
     
   }
 
-  
-
   render() {
 
     return (
-
-      <h1> You are a parent </h1>
+      <div>
+      <h1> You are a parent </h1>      
+        {this.state.children.map( child => (
+          <Child name={child.name} />
+        ))}
+      </div>
     );
   }
 }

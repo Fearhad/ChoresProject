@@ -18,9 +18,11 @@ module.exports = router;  */
 
 module.exports = function(app) {
     app.get("/api/children", function(req,res) {
-        res.json(childrenController.findAll(req));
+        childrenController.findAll(req, res);
     });
-    app.get("/api/birth", function(req,res) {
-        
-    })
+
+    app.post("/api/children", function(req, res) {
+        childrenController.create(req, res);
+        // res.send("OK");
+    });
 }
