@@ -5,7 +5,8 @@ class Child extends Component {
     render() {
         return (
             <div className="child">
-                {this.props.name}
+                Name: {this.props.name}
+                
             </div>
         )
     }

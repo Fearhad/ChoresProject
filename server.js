@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'client/public')));
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/choresdb";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
