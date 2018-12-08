@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const ChildrenDBRouter = require('./routes/children')
 const axios = require("axios");
 //const socket = require("socket.io");
 const app = express();
@@ -9,12 +10,12 @@ var bodyParser = require('body-parser')
 var cors = require('cors');
 var router = express.Router();
 app.use(cors())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 const PORT = process.env.PORT || 8080;
 
-// Connect to Database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/userdb";
+
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = require("./models");
@@ -56,7 +57,7 @@ app.use('/api', router);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 

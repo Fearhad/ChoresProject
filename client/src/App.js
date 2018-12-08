@@ -1,8 +1,6 @@
-// import React from 'react';
 import React, { Component } from 'react';
 import Layout from './hoc/Layout/Layout';
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Parent from "./pages/parent";
 import HomePage from "./pages/homepage";
 import Children from './pages/children';
@@ -10,11 +8,8 @@ import Loginscreen from './pages/loginregister'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-
-
-class App extends Component {
-  constructor(props){
-    super(props);
+class App extends Component  {
+  
     this.state={
       loginPage:[],
       uploadScreen:[]
@@ -28,12 +23,11 @@ class App extends Component {
                   loginPage:loginPage
                     })
   };
-  
-  render(){
+  render() {
     return (
-      <div>
+      <Router>
+        <div>
         <Layout>
-          <Router>
             <div>
               <Switch>
                 <Route exact path="/" component={HomePage} />
@@ -42,13 +36,10 @@ class App extends Component {
                 <Route exact path="/children" component={Children} />
               </Switch>
             </div>
-          </Router>
         </Layout>
       </div>
+      </Router>      
     );
   }
-  
-    
 }
-
 export default App;

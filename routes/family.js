@@ -1,6 +1,6 @@
 
 const router = require("express").Router();
-const familyControllers = require("../../controllers/familyController");
+const familyControllers = require("../controllers/familyController");
 //const passport = require("passport");
 //const authenticated = require
 
