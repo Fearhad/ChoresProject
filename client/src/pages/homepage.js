@@ -6,6 +6,7 @@ function HomePage () {
         <div>
             <h1>This is the HomePage</h1>
             <Link to={"/parent"}>I am a parent.</Link>
+            <Link to={"/children"}>I am a parent.</Link>            
         </div>
     );
 }

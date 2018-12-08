@@ -6,26 +6,24 @@ const axios = require("axios");
 //const socket = require("socket.io");
 const app = express();
 var bodyParser = require('body-parser')
-var cors = require('cors')
+var cors = require('cors');
+var router = express.Router();
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
-//const http = require('http').Server(app);
 const PORT = process.env.PORT || 8080;
 
+// Connect to Database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/userdb";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = require("./models");
-
+var login = require('./client/src/pages/loginregister');
 
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-//mongoose.connect(MONGODB_URI);
 
 // Make Public a static folder
 app.use(express.static(path.join(__dirname, 'client/public')));
@@ -39,11 +37,22 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Connect to Database
-
-
 // Define API routes here
 app.use(routes);
+
+// &&&&&&&&&&&&&&&&&& THIS SHOULD BE MOVE &&&&&&&&&&&&&&&&&&&&&&&
+
+//This should be in controllers
+//route to handle user registration
+router.post('/register',login.register);
+router.post('/login',login.login)
+app.use('/api', router);
+
+// Handler user registration 
+
+
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 // Send every other request to the React app
 // Define any API routes before this runs
