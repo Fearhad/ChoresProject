@@ -5,14 +5,9 @@
 
 class Children extends Component {
   render() {
-
-    <div> Something here </div>
-
-
     return (
 
-      <div> Something here </div>
-      
+      <div> You are a Childrens </div>    
 
 
     );
