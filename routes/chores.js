@@ -1,6 +1,6 @@
 
 const router = require("express").Router();
-const choresControllers = require("../../controllers/choresController");
+const choresControllers = require("../controllers/choresController");
 //const passport = require("passport");
 //const authenticated = require
 

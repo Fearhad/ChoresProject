@@ -17,14 +17,14 @@ export default {
     return axios.delete("/api/chores/" + id);
   },
   // Saves a chore to the database
-  saveChore: function(bookData) {
+  saveChore: function(ChoreData) {
     return axios.post("/api/chores", ChoreData);
   },
 
     /// ************* FAMILY SECTION ******************
     
   // Get all families
-  getFamily: function() {
+  getAllFamily: function() {
     return axios.get("/api/family");
   },
   // Gets the familywith the given id
@@ -36,7 +36,7 @@ export default {
     return axios.delete("/api/family/" + id);
   },
   // Saves a family to the database
-  saveFamily: function(bookData) {
+  saveFamily: function(FamilyData) {
     return axios.post("/api/family", FamilyData);
   },
 
@@ -47,15 +47,15 @@ export default {
     return axios.get("/api/children");
   },
   // Gets the children with the given id
-  getChildren: function(id) {
+  getChild: function(id) {
     return axios.get("/api/children/" + id);
   },
   // Deletes the children with the given id
-  deleteChildren: function(id) {
+  deleteChild: function(id) {
     return axios.delete("/api/children/" + id);
   },
   // Saves a childrento the database
-  saveChildren: function(bookData) {
+  saveChild: function(ChildrenData) {
     return axios.post("/api/children", ChildrenData);
   }
 

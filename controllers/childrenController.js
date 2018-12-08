@@ -3,6 +3,7 @@ const db = require('../models');
 module.exports = {
 
   findAll: function (req, res) {
+    console.log('fetching data...')
       db.Children
           .find()
           .then(dbModel => res.json(dbModel))
