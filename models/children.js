@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 const childrenSchema = new Schema({
   name: { type: String, required: true },
   points: { type: Number, required: true },
-  assignedchores: [{ type: Schema.Types.ObjectId, ref: 'Chores' }],
+  assignedchores: [{ type: Schema.Types.ObjectId, ref: 'chores' }],
   badgesEarned: [String]  
 });
 
-const Children = mongoose.model("Children", childrenSchema);
+const children = mongoose.model("children", childrenSchema);
 
-module.exports = Children;
+module.exports = children;

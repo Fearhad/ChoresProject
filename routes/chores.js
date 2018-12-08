@@ -6,7 +6,7 @@ const choresControllers = require("../controllers/choresController");
 
 router.route("/")
     .get(choresControllers.findAll) // Gets all chores
-    .post(choreControllers.create); // Creates a chore
+    .post(choresControllers.create); // Creates a chore
 
 router.route("/:id")
     .get(choresControllers.findById) // Get a chore by id

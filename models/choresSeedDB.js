@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const db = require(".");
+const db = require("../models/chores");
 
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/userdb"
 );
 
 const choresSeed = [
@@ -37,9 +37,7 @@ const choresSeed = [
   
 ];
 
-db.Chores
-  .remove({})
-  .then(() => db.Chores.collection.insertMany(choresSeed))
+  db.Chores.insertMany(choresSeed)
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

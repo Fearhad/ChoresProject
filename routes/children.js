@@ -1,25 +1,26 @@
-const express = require("express");
-const app = express();
-const ChildrenDBRouter = express.Router();
-const childrenDB = require("../models/children");
+//const router = require('express').Router();
+const childrenController = require('../controllers/childrenController') 
 //const passport = require("passport");
 //const authenticated = require
 
-ChildrenDBRouter.route('/childrenDB')
+/* router.route('/children')
+.get(childrenController.findAll)
+.post(childrenController.create);
 
- childrenDB.route("/childrenDB").get(function (req,res) {
-     childrenDB.find(function (err, childrenDBs) {
-         if (err) {
-             console.log(err);
-         } else {
-             res.json(childrenDBs);
-         }
-     })
- })
-    
-router.route("/api/child/:id")
-    .get(childrenControllers.findById)  
-    .put(childrenControllers.update) 
-    .delete(childrenControllers.remove);  
 
-module.exports = ChildrenDBRouter; 
+
+router.route("/children/:id")
+    .get(childrenController.findById)  
+    .put(childrenController.update) 
+    .delete(childrenController.remove);  
+
+module.exports = router;  */
+
+module.exports = function(app) {
+    app.get("/api/children", function(req,res) {
+        res.json(childrenController.findAll(req));
+    });
+    app.get("/api/birth", function(req,res) {
+        
+    })
+}

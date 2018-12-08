@@ -10,11 +10,11 @@ class Parent extends Component {
 
   componentDidMount() {
   
-    axios.get('/parent/childrenDB')
-    .then(response => {
-      this.setState({children: response.data})
-      console.log(response.data)
-      console.log('test')
+    axios.get('/api/children')
+      .then(response => {
+        console.log(response.data)
+        this.setState({children: response.data})
+      
     })
     .catch(function (error) {
       console.log(error)

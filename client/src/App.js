@@ -5,18 +5,17 @@ import Parent from "./pages/parent";
 import HomePage from "./pages/homepage";
 import Children from './pages/children';
 import Loginscreen from './pages/loginregister'
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+//import injectTapEventPlugin from 'react-tap-event-plugin';
+//injectTapEventPlugin();
 
 class App extends Component  {
   
-    this.state={
+    state={
       loginPage:[],
       uploadScreen:[]
     }
-  };
-
-  componentWillMount(){
+  
+  componentWillMount() {
     var loginPage =[];
     loginPage.push(<Loginscreen parentContext={this}/>);
     this.setState({
