@@ -1,4 +1,6 @@
  import React, { Component } from 'react';
+ import { Link } from "react-router-dom";
+
 
  // Call Remaining imports
 
@@ -6,9 +8,11 @@
 class Children extends Component {
   render() {
     return (
-
-      <div> You are a Childrens </div>    
-
+      <div>
+          <h1> You are a Children </h1>  
+          <div>  <Link to={"/login"}>Login.</Link>  </div>  
+      </div>
+    
 
     );
   }

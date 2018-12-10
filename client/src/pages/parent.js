@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import Child from "../Components/Child";
 
 class Parent extends Component {
@@ -25,7 +26,13 @@ class Parent extends Component {
 
     return (
       <div>
-      <h1> You are a parent </h1>      
+      <h1> You are a parent </h1>   
+      <div>  <Link to={"/login"}>Login.</Link>  </div>  
+
+
+
+
+
         {this.state.children.map( child => (
           <Child name={child.name} />
         ))}
