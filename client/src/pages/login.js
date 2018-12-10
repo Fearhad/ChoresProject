@@ -1,9 +1,10 @@
  import React, { Component } from 'react';
- //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
- //import AppBar from 'material-ui';
-//import RaisedButton from 'material-ui/RaisedButton';
-//import TextField from 'material-ui/TextField';
+ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+ import AppBar from '@material-ui/core/AppBar';
+ import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 import axios from 'axios';
+import MenuAppBar from '../Components/MenuAppBar/MenuAppBar';
 
 
 
@@ -29,9 +30,9 @@ class Login extends Component {
     console.log(response);
     if(response.data.code == 200){
     console.log("Login successfull");
-    //var uploadScreen=[];
-    //uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
-    //self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
+    var successRegistration=[];
+    successRegistration.push(<successRegistration appContext={self.props.appContext}/>)
+    self.props.appContext.setState({loginPage:[],successRegistration:successRegistration})
     }
     else if(response.data.code == 204){
     console.log("Username password do not match");
@@ -51,11 +52,14 @@ class Login extends Component {
 
     return (
       <div>
-        {/* <MuiThemeProvider>
+        <MenuAppBar />
+        <MuiThemeProvider>
           <div>
-         {  <AppBar
+         <AppBar
              title="Login"
-           /> }
+            
+           />
+           <div> <h1> Login </h1></div>
            <TextField
              hintText="Enter your Username"
              floatingLabelText="Username"
@@ -71,7 +75,7 @@ class Login extends Component {
              <br/>
              <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
          </div>
-         </MuiThemeProvider> */}
+         </MuiThemeProvider>
       </div>
     )
   }
