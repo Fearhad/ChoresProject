@@ -10,18 +10,7 @@ import Loginscreen from './pages/loginregister'
 
 class App extends Component  {
   
-    state={
-      loginPage:[],
-      uploadScreen:[]
-    }
-  
-  componentWillMount() {
-    var loginPage =[];
-    loginPage.push(<Loginscreen parentContext={this}/>);
-    this.setState({
-                  loginPage:loginPage
-                    })
-  };
+
   render() {
     return (
       <Router>
@@ -30,9 +19,8 @@ class App extends Component  {
             <div>
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                {/* <Route exact path="/login" component={Loginscreen} /> */}
                 <Route exact path="/parent" component={Parent} />
-                <Route exact path="/children" component={Children} />
+                <Route exact path="/child/:id" component={Children} />
               </Switch>
             </div>
         </Layout>
