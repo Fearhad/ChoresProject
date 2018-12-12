@@ -58,19 +58,19 @@
     opacity: 1;
   }
   25% {
-    top: 200px;
+    top: 250px;
     left: -3%;
     transform: scale(1.2);
     opacity: 1;
   }
   50% {
-    top: 400px;
+    top: 500px;
     left: 0;
     transform: rotateX(-60deg);
     opacity: 1;
   }
   70% {
-    top: 260px;
+    top: 300px;
     left: 3%;
     transform: scale(.5) rotateX(-180deg);
     opacity: 0;
@@ -79,7 +79,7 @@
     transform: scale(.5) rotateX(160deg)
   }
   80% {
-    top: 140px;
+    top: 200px;
     left: 2%;
     transform: scale(.6) rotateX(160deg);
     opacity: .2;
