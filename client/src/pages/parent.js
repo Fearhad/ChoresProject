@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import Child from "../Components/Child";
+import Images from "../Components/choresImages/choresImages";
 
 class Parent extends Component {
 
@@ -25,7 +26,9 @@ class Parent extends Component {
   render() {
 
     return (
+
       <div>
+      <Images />
       <h1> You are a parent </h1>   
       <div>  <Link to={"/login"}>Login.</Link>  </div>  
 
