@@ -1,8 +1,6 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-// const routes = require("./routes");
-//const socket = require("socket.io");
 const app = express();
 const PORT = process.env.PORT || 8081;
 const bodyParser = require('body-parser')
@@ -17,10 +15,6 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/choresdb";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
-
-// Define API routes here
-//app.use("/api", routes);
-
 require("./routes/children")(app);
 
 // Serve up static assets (usually on heroku)
@@ -30,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Make Public a static folder
 app.get('/', function(req, res) {
-  res.sendfile(path.resolve(__dirname, 'client/build', 'index.html'));
+  res.sendfile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {

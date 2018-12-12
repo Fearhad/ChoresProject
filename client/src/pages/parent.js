@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Child from "../Components/Child/Child";
 import classes from "./parent.css"
 import Wrapper from '../hoc/Wrapper/Wrapper'
@@ -29,7 +29,7 @@ class Parent extends Component {
         elementType: 'input',
         elementConfig: {
           type: 'text',
-          placeholder: 'Image Name'
+          placeholder: 'https://www.svgrepo.com/show/15281/boy.svg'
         },
         value: '',
         validation: {
@@ -102,16 +102,13 @@ class Parent extends Component {
   
     axios.get('/api/children')
       .then(response => {        
-        this.setState({children: response.data})
-      
+        this.setState({children: response.data})      
     })
     .catch(function (error) {
       console.log(error)
     })
-    
   }
 
-  
   render() {
 
     const formElementsArray = [];
@@ -145,12 +142,11 @@ class Parent extends Component {
     return (
       <Wrapper>
       <div className={classes.Parent}>
-      <h1> Your Children </h1>   
-      <div>  <Link to={"/login"}>Login.</Link>  </div>  
+      <h1> Your Children </h1>       
         {this.state.children.map( child => (
           <Child name={child.name}
-                 image={child.image}
-                 key={child._id} />
+                 image={child.image} id={child._id}
+                 key={child._id} points={child.points} />
         ))}
       </div>
       <div className={classes.ChildData}>

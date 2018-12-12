@@ -25,4 +25,8 @@ module.exports = function(app) {
         childrenController.create(req, res);
         // res.send("OK");
     });
+
+    app.get("/api/child/:id", function(req, res) {
+        childrenController.findById(req, res)
+    })
 }
