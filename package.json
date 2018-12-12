@@ -24,8 +24,7 @@
     "url": "https://github.com/Fearhad/ChoresProject/issues"
   },
   "homepage": "https://github.com/Fearhad/ChoresProject#readme",
-  "proxy": "http://localhost:3001",
-  "dependencies": {
+    "dependencies": {
     "@material-ui/core": "^3.6.2",
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
