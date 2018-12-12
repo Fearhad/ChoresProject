@@ -146,7 +146,6 @@ class Parent extends Component {
       <Wrapper>
       <div className={classes.Parent}>
       <h1> Your Children </h1>   
-      <div>  <Link to={"/login"}>Login.</Link>  </div>  
         {this.state.children.map( child => (
           <Child name={child.name}
                  image={child.image}

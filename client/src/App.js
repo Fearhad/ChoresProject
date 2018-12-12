@@ -8,6 +8,13 @@ import Loginscreen from './pages/loginregister'
 //import injectTapEventPlugin from 'react-tap-event-plugin';
 //injectTapEventPlugin();
 
+
+
+
+
+
+
+
 class App extends Component  {
   
     state={
@@ -30,7 +37,7 @@ class App extends Component  {
             <div>
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                {/* <Route exact path="/login" component={Loginscreen} /> */}
+                <Route exact path="/login" component={Loginscreen} />
                 <Route exact path="/parent" component={Parent} />
                 <Route exact path="/children" component={Children} />
               </Switch>
