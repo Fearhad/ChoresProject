@@ -5,29 +5,31 @@ const db = require(".");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/choresdb"
 );
 
 const childrenSeed = [
   {
-    name: "Gaby",
-    points: 50,
-    assignedchores: [{["Make Bed", "Pick up Toys"], ref: 'Children' }],
-    badgesEarned: [String]  
+    name: "Brianna",
+    points: 0,
+    assignedchores: [],
+    badgesEarned: [],
+    image: 'Brianna.png'  
   },
   {
-    name: "Karen",
-    points: 30,
-    assignedchores: [{["Load dishwasher", "Unload dishwasher"], ref: 'Children' }],
-    badgesEarned: [String]  
+    name: "Autumn",
+    points: 0,
+    assignedchores: [],
+    badgesEarned: [],
+    image: 'Autumn.png' 
   },
   
   
 ];
 
-db.Children
+db.children
   .remove({})
-  .then(() => db.Children.collection.insertMany(childrenSeed))
+  .then(() => db.children.collection.insertMany(childrenSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

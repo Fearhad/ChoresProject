@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import Child from "../Components/Child";
+import Child from "../Components/Child/Child";
+import classes from "./parent.css"
+
 
 class Parent extends Component {
 
@@ -25,8 +27,8 @@ class Parent extends Component {
   render() {
 
     return (
-      <div>
-      <h1> You are a parent </h1>   
+      <div className={classes.Parent}>
+      <h1> Your Children </h1>   
       <div>  <Link to={"/login"}>Login.</Link>  </div>  
 
 
@@ -34,7 +36,9 @@ class Parent extends Component {
 
 
         {this.state.children.map( child => (
-          <Child name={child.name} />
+          <Child name={child.name}
+                 image={child.image}
+                 key={child._id} />
         ))}
       </div>
     );
