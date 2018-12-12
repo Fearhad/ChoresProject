@@ -14,14 +14,14 @@ const childrenSeed = [
     points: 0,
     assignedchores: [],
     badgesEarned: [],
-    image: 'Brianna.png'  
+    image: 'https://image.flaticon.com/icons/svg/186/186037.svg'  
   },
   {
     name: "Autumn",
     points: 0,
     assignedchores: [],
     badgesEarned: [],
-    image: 'Autumn.png' 
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjM9d7JVvVLN_Y4F5Lgatl1UNhizGAwuck-pit65Wx2tYvdu1QCg' 
   },
   
   
