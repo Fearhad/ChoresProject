@@ -12,7 +12,6 @@ const cors = require('cors');
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-app.use(express.static(path.join(__dirname, 'client/public')));
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/choresdb";
 mongoose.Promise = Promise;
