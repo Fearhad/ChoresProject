@@ -1,0 +1,106 @@
+.Homepage {
+  background-image: url('../assets/images/tired-chore-girl.jpg');
+  background-size: cover;
+  color: black;
+  height: 60vmax;
+}
+
+.Homepage h1 {
+  font-size: 40px;
+}
+
+.Homepage h1, .Homepage h2, .Homepage h6 {
+  margin-left: 20px;
+}
+
+.Homepage article {
+  perspective: 100em;
+  position: absolute;
+  top: -80px;
+  left: 100px;
+  margin: 300px auto;
+  width: 200px;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+.Homepage article:hover p {
+  animation-play-state: paused;
+}
+
+.Homepage p {
+  opacity: 0;
+  animation: fall 8s infinite linear;
+  width: 200px;
+  position: absolute;
+  font-family: sans-serif;
+  border: 5px solid black;
+  box-sizing: border-box;
+  box-shadow: 0 2px 3px #ccc;
+}
+
+.Homepage p:nth-child(1) { animation-delay: 1s; background-color: pink }
+.Homepage p:nth-child(2) { animation-delay: 4s; background-color: pink}
+.Homepage p:nth-child(3) { animation-delay: 7s; background-color: lightgoldenrodyellow}
+.Homepage p:nth-child(4) { animation-delay: 10s; background-color: lightgoldenrodyellow }
+.Homepage p:nth-child(5) { animation-delay: 13s; background-color: palegreen}
+.Homepage p:nth-child(6) { animation-delay: 16s; background-color: palegreen}
+.Homepage p:nth-child(7) { animation-delay: 19s; background-color: lightblue}
+.Homepage p:nth-child(8) { animation-delay: 22s; background-color: lightblue}
+
+
+@keyframes fall {
+  0% {
+    top: 0;
+    left: 0;
+    transform: rotateX(70deg);
+    opacity: 1;
+  }
+  25% {
+    top: 200px;
+    left: -3%;
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    top: 400px;
+    left: 0;
+    transform: rotateX(-60deg);
+    opacity: 1;
+  }
+  70% {
+    top: 260px;
+    left: 3%;
+    transform: scale(.5) rotateX(-180deg);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(.5) rotateX(160deg)
+  }
+  80% {
+    top: 140px;
+    left: 2%;
+    transform: scale(.6) rotateX(160deg);
+    opacity: .2;
+  }
+  90% {
+    top: 100px;
+    left: 2%;
+    transform: scale(.8) rotateX(120deg);
+    opacity: .8;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: scale(1) rotateX(70deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 499px) {
+  .Homepage article {
+    top: 200px;
+    background-size: contain;
+  }
+}
