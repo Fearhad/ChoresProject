@@ -142,7 +142,7 @@ class Parent extends Component {
     return (
       <Wrapper>
       <div className={classes.Parent}>
-      <h1> Your Children </h1>       
+      <h1> Your Children </h1>   
         {this.state.children.map( child => (
           <Child name={child.name}
                  image={child.image} id={child._id}

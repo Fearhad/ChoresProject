@@ -1,11 +1,19 @@
 .Logo {
-  background-color: white;
+  background-color: yellow;
   padding: 8px;
   height: 100%;
   box-sizing: border-box;
   border-radius: 5px;
+  display: flex;
+  flex-flow: row;
 }
 
 .Logo img {
   height: 100%;
+}
+
+.Span {
+  font-size: 26px;
+  margin-left: 10px;
+  line-height: 1.0;
 }

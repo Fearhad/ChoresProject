@@ -5,6 +5,13 @@ import Parent from "./pages/parent";
 import HomePage from "./pages/homepage";
 import ChildPage from './pages/child';
 
+
+
+
+
+
+
+
 class App extends Component  {
 
   render() {

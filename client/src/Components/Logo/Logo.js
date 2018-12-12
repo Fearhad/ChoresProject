@@ -5,6 +5,7 @@ import choresLogo from '../../assets/images/ur-chores.png'
 const logo = (props) => (
   <div className={classes.Logo}>
     <img src={choresLogo} alt="Site Logo"></img>
+    <span className={classes.Span}>YourChores</span>
   </div>
 )
 
