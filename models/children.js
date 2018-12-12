@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const childrenSchema = new Schema({
   name: { type: String, required: true },
-  points: { type: Number, required: true },
+  points: { type: Number},
   assignedchores: [{ type: Schema.Types.ObjectId, ref: 'chores' }],
-  badgesEarned: [String]  
+  badgesEarned: [String],
+  image: [String]
 });
 
 const children = mongoose.model("children", childrenSchema);
