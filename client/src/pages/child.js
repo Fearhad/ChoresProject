@@ -3,6 +3,7 @@ import axios from 'axios';
 import ChildHeader from '../Components/Child/ChildHeader/ChildHeader'
 import Wrapper from '../hoc/Wrapper/Wrapper'
 import AssignedChores from '../Components/Child/AssignedChores/AssignedChores'
+
 class ChildPage extends Component {
   state = {
     id: "",
@@ -30,6 +31,7 @@ class ChildPage extends Component {
   
   render() {
     return (
+
       <Wrapper>
       
         <ChildHeader  
@@ -39,7 +41,7 @@ class ChildPage extends Component {
           assignedChores={this.state.data.assignedchores} />
       </Wrapper>
     
-
+     
     );
   }
 }
