@@ -9,6 +9,14 @@
   font-size: 40px;
 }
 
+.Homepage h2 {
+  width: 700px;
+}
+
+.Homepage h6 {
+  font-size: 20px;
+}
+
 .Homepage h1, .Homepage h2, .Homepage h6 {
   margin-left: 20px;
 }
@@ -16,9 +24,9 @@
 .Homepage article {
   perspective: 100em;
   position: absolute;
-  top: -80px;
+  top: 400px;
   left: 100px;
-  margin: 300px auto;
+  margin: auto;
   width: 200px;
   font-size: 20px;
   font-family: 'Fredoka One', cursive;
@@ -27,6 +35,16 @@
 
 .Homepage article:hover p {
   animation-play-state: paused;
+}
+
+.Welcome {
+  display: flex;
+  flex-direction: row;
+}
+
+.Logo {
+  width: 200px;
+  height: 200px;
 }
 
 .Homepage p {
@@ -100,7 +118,22 @@
 
 @media (max-width: 499px) {
   .Homepage article {
-    top: 200px;
+    top: 450px;
     background-size: contain;
+  }
+  .Homepage h1 {
+    font-size: 30px;
+  }
+
+  .Homepage h2 {
+    width: 400px;
+  }
+
+  .Homepage h6 {
+    font-size: 25px;
+    background-color: black;
+    width: 200px;
+    color: white;
+    text-align: center;
   }
 }
