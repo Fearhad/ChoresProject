@@ -10,13 +10,13 @@ function HomePage () {
     return (
         <Wrapper>
             <div className={classes.Homepage}>
-        <div>
-       
+            <div className={classes.Welcome}>
+            <img className={classes.Logo} src={require('../assets/images/ur-chores.png')} alt="logo"></img>
             <h1>Welcome to YourChores</h1>
+            </div>
             <h2>Motivate your children to complete tasks by providing monetary and non-monetary rewards</h2>            
             <Link to={"/parent"}><h6>Enter Site</h6></Link>
             <Link to={"/login"}><h6>Login test</h6></Link>
-
 
             <article>
   <p>Clean your room</p>
@@ -30,7 +30,7 @@ function HomePage () {
 </article>
             
         </div>
-        </div>
+        
         </Wrapper>
     );
 }

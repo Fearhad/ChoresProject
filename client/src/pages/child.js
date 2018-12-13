@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ChildHeader from '../Components/Child/ChildHeader/ChildHeader'
-
+import Wrapper from '../hoc/Wrapper/Wrapper'
+import AssignedChores from '../Components/Child/AssignedChores/AssignedChores'
 
 class ChildPage extends Component {
   state = {
     id: "",
     data: {}
   }
-
+  
   componentDidMount() {
     const { id } = this.props.match.params;
     this.setState({
@@ -19,26 +20,27 @@ class ChildPage extends Component {
 
     axios.get('/api/child/' + this.props.match.params.id)
     .then(response => {        
-      this.setState({data: response.data})      
+      this.setState({data: response.data}) 
+      console.log(this.state.data)
+           
     })
     .catch(function (error) {
     console.log(error)
     })
   }
-
+  
   render() {
     return (
 
-      <div>
-         <ChildHeader  
-            name={this.state.data.name}
-            points={this.state.data.points}>
-        </ChildHeader>
-
-              
-
-
-      </div>
+      <Wrapper>
+      
+        <ChildHeader  
+          name={this.state.data.name}
+          points={this.state.data.points}/>
+        <AssignedChores
+          assignedChores={this.state.data.assignedchores} />
+      </Wrapper>
+    
      
     );
   }
