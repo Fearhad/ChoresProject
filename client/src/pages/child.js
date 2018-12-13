@@ -8,11 +8,10 @@ class ChildPage extends Component {
   state = {
     id: "",
     data: {},
-    chores: []
+    
   }
   
   componentDidMount() {
-    this.setState({loading: true});
     const { id } = this.props.match.params;
     this.setState({
       id: id,
@@ -21,41 +20,31 @@ class ChildPage extends Component {
     console.log(this.props.match.params);
 
     axios.get('/api/child/' + this.props.match.params.id)
-    .then(response => {
-      
-      console.log(choresArray, this.state.chores)
-      this.setState({data: response.data})  
-      let choresArray = []
-      for (let key in this.response.data) {
-        choresArray[key] = this.response.data[key].value;
-        this.state.chores.push(choresArray[key])
-      }           
+    .then(response => {        
+      this.setState({loading: false, data: response.data})           
     })
     .catch(function (error) {
+      this.setState({loading: false});
       console.log(error)
     })
   }
   
   render() {
     
-    
-    
     return (
-         
+      
       <Wrapper>
       
         <ChildHeader  
           name={this.state.data.name}
           points={this.state.data.points}>
          </ChildHeader>         
-         <AssignedChores 
-         assignedChores = {this.state.chores} />
+         <AssignedChores />
       </Wrapper>
     
      
     );
-    }
   }
-
+}
 
 export default ChildPage;
