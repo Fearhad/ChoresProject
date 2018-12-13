@@ -10,6 +10,6 @@ const choresSchema = new Schema({
   frequency: String
 });
 
-const Chores = mongoose.model("Chores", choresSchema);
+const chores = mongoose.model("chores", choresSchema);
 
-module.exports = Chores;
+module.exports = chores;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ChildHeader from '../Components/Child/ChildHeader/ChildHeader'
 class ChildPage extends Component {
   state = {
     id: "",
@@ -25,10 +26,10 @@ class ChildPage extends Component {
 
   render() {
     return (
-      <div className="container">
-        <p>Name: {this.state.data.name} </p>
-        Child ID: {this.state.id}
-      </div>
+      <ChildHeader  
+      name={this.state.data.name}
+      points={this.state.data.points}>
+      </ChildHeader>
     
 
     );
