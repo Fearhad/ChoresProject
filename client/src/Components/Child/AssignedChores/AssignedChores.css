@@ -1,0 +1,34 @@
+.AssignedChores {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  border: 10px solid black;
+  background-color: lightgoldenrodyellow;
+}
+
+.AssignedChores ul {
+  flex-flow: row;
+  display: flex;
+  justify-content: center;
+}
+
+.AssignedChores li {
+  border: 1px solid black;
+  box-shadow: 0 2px 3px #ccc;
+  display: flex;
+  flex-flow: row;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100px;
+  margin: 10px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 14px;
+  background-color: #3366ff;
+  color: white;
+  height: 120px;
+}
