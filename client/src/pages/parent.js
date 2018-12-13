@@ -29,7 +29,7 @@ class Parent extends Component {
         elementType: 'input',
         elementConfig: {
           type: 'text',
-          placeholder: 'https://www.svgrepo.com/show/15281/boy.svg'
+          placeholder: 'Paste Image Link Address Here'
         },
         value: '',
         validation: {

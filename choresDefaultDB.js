@@ -5,10 +5,10 @@ const db = require(".");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/choresdb"
 );
 
-const choresDefault = [
+const choresSeed = [
   {
     name: "Make a Bed",
     value: 20,  // range: 1 < x <=  50
@@ -94,9 +94,9 @@ const choresDefault = [
   
 ];
 
-db.Chores
+db.chores
   .remove({})
-  .then(() => db.Chores.collection.insertMany(choresDefault))
+  .then(() => db.chores.collection.insertMany(choresSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
