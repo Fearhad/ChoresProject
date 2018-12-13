@@ -4,7 +4,6 @@
  import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-import MenuAppBar from '../Components/MenuAppBar/MenuAppBar';
 
 
 
@@ -52,7 +51,6 @@ class Login extends Component {
 
     return (
       <div>
-        <MenuAppBar />
         <MuiThemeProvider>
           <div>
          <AppBar

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import classes from './homepage.css';
-import Wrapper from '../hoc/Wrapper/Wrapper'
+import Wrapper from '../hoc/Wrapper/Wrapper';
+
 
 
 
@@ -14,6 +15,7 @@ function HomePage () {
             <h1>Welcome to YourChores</h1>
             <h2>Motivate your children to complete tasks by providing monetary and non-monetary rewards</h2>            
             <Link to={"/parent"}><h6>Enter Site</h6></Link>
+
             <article>
   <p>Clean your room</p>
   <p>Empty dishwasher</p>

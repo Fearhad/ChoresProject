@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Parent from "./pages/parent";
 import HomePage from "./pages/homepage";
 import ChildPage from './pages/child';
+import LoginRegister from './Components/login/loginregister';
+
+
 
 
 
@@ -21,7 +24,8 @@ class App extends Component  {
         <Layout>
             <div>
               <Switch>
-                <Route exact path="/" component={HomePage} />                
+                <Route exact path="/" component={HomePage} />  
+                <Route exact path="/login" component={LoginRegister} />        
                 <Route exact path="/parent" component={Parent} />
                 <Route exact path="/child/:id" component={ChildPage} />
               </Switch>

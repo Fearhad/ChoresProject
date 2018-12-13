@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Login from './login';
 import Register from './register';
 
-class Loginscreen extends React.Component {
+class LoginRegister extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -65,7 +65,15 @@ class Loginscreen extends React.Component {
   render() {
     return (
       <div className="loginscreen">
-        
+        {this.state.loginscreen}
+        <div>
+          {this.state.loginmessage}
+          <MuiThemeProvider>
+            <div>
+               <RaisedButton label={this.state.buttonLabel} primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+           </div>
+          </MuiThemeProvider>
+        </div>
       </div>
     );
   }
@@ -73,4 +81,4 @@ class Loginscreen extends React.Component {
 const style = {
   margin: 15,
 };
-export default Loginscreen;
+export default LoginRegister;
