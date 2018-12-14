@@ -32,3 +32,83 @@
   color: white;
   height: 120px;
 }
+
+.CompletedChores {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  border: 10px solid black;
+  background-color: rgb(175, 230, 175);
+}
+
+.CompletedChores ul {
+  flex-flow: row;
+  display: flex;
+  justify-content: center;
+}
+
+.CompletedChores li {
+  border: 1px solid black;
+  box-shadow: 0 2px 3px #ccc;
+  display: flex;
+  flex-flow: row;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100px;
+  margin: 10px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 14px;
+  background-color: #3366ff;
+  color: white;
+  height: 120px;
+}
+
+.AvailableChores {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  border: 10px solid black;
+  background-color: lightblue;
+}
+
+.AvailableChores ul {
+  flex-flow: row;
+  display: flex;
+  justify-content: center;
+}
+
+.AvailableChores li {
+  border: 1px solid black;
+  box-shadow: 0 2px 3px #ccc;
+  display: flex;
+  flex-flow: row;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100px;
+  margin: 10px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 14px;
+  background-color: #3366ff;
+  color: white;
+  height: 120px;
+}
+
+button {
+  width: 30%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: auto;
+}
